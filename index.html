@@ -2,369 +2,514 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="x-icon" href="favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Devraj Parmar</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devraj Parmar</title>
+  <link rel="shortcut icon" type="x-icon" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #081b29;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 80px;
+      background-color: transparent;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      list-style: none;
+      margin: 0 23px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #00abf0;
+      font-size: 1.1rem;
+    }
+
+    hr {
+      border: 0;
+      background: #00abf0;
+      height: 1.5px;
+      margin: 40px 80px;
+    }
+
+    .leftnav {
+      position: relative;
+      font-size: 1.7rem;
+      color: #ededed;
+      font-weight: 600;
+    }
+
+    .leftnav::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: #081b29;
+      animation: showRight 1s ease forwards;
+      animation-delay: 0.4s;
+    }
+
+    #menu {
+      font-size: 2rem;
+      color: #ededed;
+      display: none;
+    }
+
+    .firstsec {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 120px 30px;
+      /* background: url('bg.jpg') no-repeat;
+      background-size: cover;
+      background-position: center; */
+    }
+
+    .firstsec div {
+      width: 40%;
+    }
+
+    .leftdiv {
+      font-size: 3rem;
+    }
+
+    .leftdiv .buttons {
+      padding: 50px 0;
+    }
+
+    .buttons a {
+      display: inline-flex;
+      position: relative;
+      padding: 12px;
+      background: transparent;
+      color: #00abf0;
+      border: 2px solid #00abf0;
+      border-radius: 6px;
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 1;
+      overflow: hidden;
+      text-decoration: none;
+    }
+
+    .buttons a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: #00abf0;
+      z-index: -1;
+      transition: 0.5s;
+    }
+
+    .buttons a:hover::before {
+      width: 100%;
+    }
+
+    .buttons a:hover {
+      color: #081b29;
+    }
+
+    .rightdiv img {
+      width: 100%;
+      margin: 40px 0;
+      /* position: absolute; */
+      background: transparent;
+      transition: 0.5s;
+    }
+
+    .rightdiv img:hover {
+      background: #081b29;
+      opacity: 0.5;
+    }
+
+    .textblue {
+      color: #00abf0;
+    }
+
+    #element {
+      color: #00abf0;
+      /* display: inline-block; */
+    }
+
+    .secondsec {
+      max-width: 80vw;
+      margin-left: 10rem;
+      height: 80vh;
+    }
+
+    .secondsec h1 {
+      font-size: 2rem;
+    }
+
+    .secondsec .box {
+      background: white;
+      width: 80vw;
+      height: 2px;
+      margin: 56px 0;
+      display: flex;
+    }
+
+    .secondsec .vertical {
+      height: 93px;
+      width: 1px;
+      background: white;
+      margin: 0 6vw;
+    }
+
+    .image1 {
+      width: 23px;
+      position: relative;
+      top: -32px;
+      left: -9px;
+    }
+
+    .vertical-title {
+      position: relative;
+      top: 75px;
+      width: 150px;
+      font-size: 20px;
+    }
+
+    .vertical-desc {
+      position: relative;
+      top: 86px;
+      color: gray;
+      width: 150px;
+      font-size: 15px;
+    }
+
+    .foot {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 23px 122px;
+    }
+
+    .foot a {
+      display: inline-flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      background: transparent;
+      border: 2px solid #00abf0;
+      border-radius: 50%;
+      font-size: 20px;
+      text-decoration: none;
+      color: #00abf0;
+      z-index: 1;
+      overflow: hidden;
+      transition: 0.5s;
+    }
+
+    .foot a:hover {
+      color: #081b29;
+    }
+
+    .foot a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: #00abf0;
+      z-index: -1;
+      transition: 0.5s;
+    }
+
+    .foot a:hover::before {
+      width: 100%;
+    }
+
+    footer .footrights {
+      text-align: center;
+      color: gray;
+      padding: 12px 0;
+    }
+
+    @media screen and (max-width: 1535px) {
+      /* body {
+        min-width: fit-content;
+      }
+
+      .firstsec {
+        flex-direction: column-reverse;
+      } */
+
+      .box {
+        flex-direction: column;
+      }
+
+      .secondsec .vertical {
+        height: unset;
+      }
+
+      .vertical-title,
+      .vertical-desc {
+        left: 45px;
+      }
+
+      .secondsec .box {
+        width: 50vw;
+      }
+
+      /* nav {
+        flex-direction: column;
+      } */
+      .firstsec div {
+        width: 100%;
+      }
+
+      .leftdiv {
+        width: 100% !important;
+        font-size: 2.5rem;
+      }
+
+      .rightdiv {
+        /* width: 221px !important; */
+        display: flex;
+        justify-content: center;
+      }
+
+      .rightdiv img {
+        width: 35vw;
+        margin-bottom: 73px;
+        animation: floatImage 4s ease-in-out infinite;
+      }
+
+      @keyframes floatImage {
+        0% {
+          transform: translateY(0);
         }
 
-        body {
-            background: #081b29;
-            color: white;
-            font-family: 'Poppins', sans-serif;
+        50% {
+          transform: translateY(-2.4rem);
         }
 
-        nav {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            height: 80px;
-            background-color: transparent;
+        100% {
+          transform: translateY(0);
         }
+      }
 
-        nav ul {
-            display: flex;
-            justify-content: center;
-        }
+      .secondsec {
+        /* max-width: 80vw;
+        margin: auto; */
+        height: 121vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-        nav ul li {
-            list-style: none;
-            margin: 0 23px;
-        }
 
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            transition: 0.3s;
-        }
+    }
 
-        nav ul li a:hover {
-            color: #00abf0;
-            font-size: 1.1rem;
-        }
+    @media screen and (max-width: 406px) {
+      .rightdiv {
+        /* width: 311px !important; */
+      }
 
-        hr {
-            border: 0;
-            background: #00abf0;
-            height: 1.5px;
-            margin: 40px 80px;
-        }
+      .leftdiv {
+        font-size: 3rem !important;
+      }
 
-        .leftnav {
-            position: relative;
-            font-size: 1.7rem;
-            color: #ededed;
-            font-weight: 600;
-        }
+      .image1 {
+        top: 122px;
+      }
+    }
 
-        .leftnav::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            background: #081b29;
-            animation: showRight 1s ease forwards;
-            animation-delay: 0.4s;
-        }
+    @media screen and (max-width: 1200px) {
+      html {
+        font-size: 55%;
+      }
+    }
 
-        #menu {
-            font-size: 2rem;
-            color: #ededed;
-            display: none;
-        }
+    @media screen and (max-width: 991px) {
 
-        .projects {
-            /* gap: 2rem; */
-            margin: 120px 30px;
-        }
+      /*       header {
+        padding: 2rem 3%;
+      }
+      section {
+        padding: 10rem 3% 2rem;
+      } */
+      .foot {
+        padding: 2rem 3%;
+      }
+    }
 
-        .projects h2 {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 4rem;
-            font-size: 3rem;
-            text-align: center;
-        }
+    @media screen and (max-width: 768px) {
+      #menu {
+        display: block;
+        cursor: pointer;
+      }
 
-        .container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            align-items: center;
-            gap: 2.5rem;
-        }
+      .rightnav {
+        position: absolute;
+        top: 10%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: #081b29;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+        display: none;
+      }
 
-        .container .box {
-            position: relative;
-            border-radius: 2rem;
-            box-shadow: 0 0 1rem #00abf0;
-            border: 0.2rem solid #00abf0;
-            overflow: hidden;
-            display: flex;
-        }
+      .rightnav a {
+        display: block;
+        font-size: 1.5rem;
+        margin: 3rem 0;
+      }
 
-        .box img {
-            width: 100%;
-            transition: 0.5s ease;
-        }
+      .rightnav.active {
+        display: block;
+      }
 
-        .box:hover img {
-            transform: scale(1.1);
-        }
+      .firstsec {
+        flex-direction: column;
+      }
 
-        .box .layer {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(0, 0, 0, .1), #112b42);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-            padding: 0 4rem;
-            transform: translateY(100%);
-            transition: 0.5s ease;
-        }
+      .leftdiv {
+        font-size: 3rem;
+      }
 
-        .box:hover .layer {
-            transform: translateY(0);
+      .rightdiv img {
+        width: 70vw;
+        margin-top: 4rem;
+      }
 
-        }
+      .leftdiv .buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
 
-        .layer h4 {
-            font-size: 2rem;
-        }
-
-        .layer p {
-            font-size: 1.1rem;
-            margin: 0.3rem 0 0.2rem;
-        }
-
-        .layer a {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 4rem;
-            height: 4rem;
-            background: #081b29;
-            border-radius: 50%;
-            text-decoration: none;
-        }
-
-        .layer a i {
-            font-size: 2rem;
-            color: #00abf0;
-        }
-
-        .foot {
-            display: flex;
-            justify-content: space-evenly;
-            padding: 23px 122px;
-        }
-
-        .foot a {
-            display: inline-flex;
-            position: relative;
-            justify-content: center;
-            align-items: center;
-            width: 40px;
-            height: 40px;
-            background: transparent;
-            border: 2px solid #00abf0;
-            border-radius: 50%;
-            font-size: 20px;
-            text-decoration: none;
-            color: #00abf0;
-            z-index: 1;
-            overflow: hidden;
-            transition: 0.5s;
-        }
-
-        .foot a:hover {
-            color: #081b29;
-        }
-
-        .foot a::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 100%;
-            background: #00abf0;
-            z-index: -1;
-            transition: 0.5s;
-        }
-
-        .foot a:hover::before {
-            width: 100%;
-        }
-
-        footer .footrights {
-            text-align: center;
-            color: gray;
-            padding: 12px 0;
-        }
-
-        @media screen and (max-width: 1380px) {
-            #menu {
-                display: block;
-                cursor: pointer;
-            }
-
-            .rightnav {
-                position: absolute;
-                top: 10%;
-                left: 0;
-                width: 100%;
-                padding: 1rem 3%;
-                background: #081b29;
-                border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
-                box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-                display: none;
-            }
-
-            .rightnav a {
-                display: block;
-                font-size: 1.5rem;
-                margin: 3rem 0;
-            }
-
-            .rightnav.active {
-                display: block;
-            }
-
-            html {
-                font-size: 50%;
-            }
-
-            .projects h2 {
-                margin-bottom: 3rem;
-            }
-
-            .projects .container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .foot {
-                padding: 2rem 3%;
-            }
-        }
-
-        @media screen and (max-width: 600px) {
-            .projects .container {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @keyframes showRight {
-            100% {
-                width: 0;
-            }
-        }
-    </style>
+    @keyframes showRight {
+      100% {
+        width: 0;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="leftnav">Dev</div>
-            <i class='bx bx-menu' id="menu"></i>
-            <div class="rightnav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <section class="projects">
-        <h2 class="heading">Latest Project</h2>
-        <div class="container">
-            <div class="box">
-                <img src="attendance.jpg" alt="">
-                <div class="layer">
-                    <h4>Attendance System</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi laborum hic pariatur corrupti
-                        cupiditate quis ipsam quisquam est, itaque labore inventore.</p>
-                    <a href="https://replit.com/@DevrajParmar/Pythonprograms#fra(face).py" target="_blank"><i class='bx bx-link-alt'></i></a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="digit.jpg" alt="">
-                <div class="layer">
-                    <h4>Digit classification</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi laborum hic pariatur corrupti
-                        cupiditate quis ipsam quisquam est, itaque labore inventore.</p>
-                    <a href="https://colab.research.google.com/drive/182lKanL8Bs-_LmcgsB0_d6G2I1MmX8jW?authuser=2" target="_blank"><i class='bx bx-link-alt'></i></a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="house.jpg" alt="">
-                <div class="layer">
-                    <h4>House Rent Predict</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi laborum hic pariatur corrupti
-                        cupiditate quis ipsam quisquam est, itaque labore inventore.</p>
-                    <a href="https://colab.research.google.com/drive/1lsR2BhWH6-kWnBkxOC6XPLN31gDvtvwU?authuser=2" target="_blank"><i class='bx bx-link-alt'></i></a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="web.png" alt="">
-                <div class="layer">
-                    <h4>Web scraping</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi laborum hic pariatur corrupti
-                        cupiditate quis ipsam quisquam est, itaque labore inventore.</p>
-                    <a href="https://replit.com/@DevrajParmar/Pythonprograms#amazonscrap.py" target="_blank"><i class='bx bx-link-alt'></i></a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="jarvis.jfif" alt="">
-                <div class="layer">
-                    <h4>Jarvis AI</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi laborum hic pariatur corrupti
-                        cupiditate quis ipsam quisquam est, itaque labore inventore.</p>
-                    <a href="https://replit.com/@DevrajParmar/Pythonprograms#jarvis.py" target="_blank"><i class='bx bx-link-alt'></i></a>
-                </div>
-            </div>
-            <div class="box">
-                <img src="pdf.jpg" alt="">
-                <div class="layer">
-                    <h4>PDF Modification</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi laborum hic pariatur corrupti
-                        cupiditate quis ipsam quisquam est, itaque labore inventore.</p>
-                    <a href="https://replit.com/@DevrajParmar/Pythonprograms#pdf.py" target="_blank"><i class='bx bx-link-alt'></i></a>
-                </div>
-            </div>
+  <header>
+    <nav>
+      <div class="leftnav">Dev</div>
+      <i class='bx bx-menu' id="menu"></i>
+      <div class="rightnav">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="firstsec">
+      <div class="leftdiv">
+        Hey, I am <span class="textblue">Devraj Parmar</span>
+        and I am a passionate<br>
+        <span id="element"></span>
+        <div class="buttons">
+          <a href="https://1drv.ms/w/s!Ai3HdJsR-4RfpFtChae3If1-up32" target="_blank">Resume</a>
         </div>
+      </div>
+      <div class="rightdiv">
+        <img src="bg.jpg" alt="">
+      </div>
     </section>
     <hr>
-    <footer>
-        <div class="foot">
-            <a href="https://www.linkedin.com/in/dev-parmar-32932b233/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-            <a href="https://github.com/DEV17CODER" target="_blank"><i class='bx bxl-github'></i></a>
-            <a href=""><i class='bx bxl-twitter'></i></a>
-            <a href="https://www.instagram.com/__dev__17_/" target="_blank"><i class='bx bxl-instagram'></i></a>
-            <a href="https://www.facebook.com/profile.php?id=100008611501343" target="_blank"><i class='bx bxl-facebook'></i></a>
+    <section class="secondsec">
+      <span class="textgray">What I have done so far</span>
+      <h1>Work experience</h1>
+      <div class="box">
+        <div class="vertical">
+          <img class="image1" src="">
+          <div class="vertical-title">B.Tech in CS</div>
+          <div class="vertical-desc">CSPIT, CHRUSAT UNIVERSITY <br>
+            Started my journey with cs in best uni. and gain quality knowledge.
+          </div>
         </div>
-        <div class="footrights">
-            Copyright &copy; 2023 Devraj's Portfolio | All rights reserved.
+        <div class="vertical">
+          <img class="image1" src="bg.jpg">
+          <div class="vertical-title">Full-Stack Developer</div>
+          <div class="vertical-desc">ACMEGRADE PVT.LTD. <br>
+            Made a project for an e-commerce site and experienced a full-stack development scheme.
+          </div>
         </div>
-    </footer>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="script.js"></script>
+        <div class="vertical">
+          <img class="image1" src="">
+          <div class="vertical-title">Research in ML</div>
+          <div class="vertical-desc">CHARUSAT UNIVERSITY <br>
+            Analyze diffrent research paper on human object interaction and create a report(survey) which is best model
+            with accuracy.
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr>
+  </main>
+  <footer>
+    <div class="foot">
+      <a href="https://www.linkedin.com/in/dev-parmar-32932b233/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+      <a href="https://github.com/DEV17CODER" target="_blank"><i class='bx bxl-github'></i></a>
+      <a href=""><i class='bx bxl-twitter'></i></a>
+      <a href="https://www.instagram.com/__dev__17_/" target="_blank"><i class='bx bxl-instagram'></i></a>
+      <a href="https://www.facebook.com/profile.php?id=100008611501343" target="_blank"><i
+          class='bx bxl-facebook'></i></a>
+    </div>
+    <div class="footrights">
+      Copyright &copy; 2023 Devraj's Portfolio | All rights reserved
+    </div>
+  </footer>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Data Scientist', 'Data Analyst', 'Python developer', 'AI developer'],
+      typeSpeed: 50,
+      backSpeed: 50,
+      backDelay: 1000,
+      loop: true
+    });
+  </script>
 </body>
 
 </html>
