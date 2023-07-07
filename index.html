@@ -260,7 +260,7 @@
       padding: 12px 0;
     }
 
-    @media screen and (max-width: 1535px) and (min-width: 800px) {
+    @media screen and (max-width: 1535px) {
       /* body {
         min-width: fit-content;
       }
@@ -268,6 +268,23 @@
       .firstsec {
         flex-direction: column-reverse;
       } */
+
+      .box {
+        flex-direction: column;
+      }
+
+      .secondsec .vertical {
+        height: unset;
+      }
+
+      .vertical-title,
+      .vertical-desc {
+        left: 35px;
+      }
+
+      .secondsec .box {
+        width: 60vw;
+      }
 
       /* nav {
         flex-direction: column;
@@ -306,48 +323,19 @@
           transform: translateY(0);
         }
       }
+
       .secondsec {
-        max-width: 80vw;
-        margin-left: 10rem;
-        height: 80vh;
-        margin-bottom: 200px !important;
-      }
-
-      .secondsec .box {
-        background: white;
-        width: 80vw;
-        height: 2px;
-        margin: 56px 0;
+        /* max-width: 80vw;
+        margin: auto; */
+        /* height: 121vh; */
+        margin-bottom: 120px !important;
         display: flex;
+        flex-direction: column;
+        /* align-items: center; */
       }
 
-      .secondsec .vertical {
-        height: 93px;
-        width: 2px;
-        background: white;
-        margin: 0 12vw;
-      }
-
-      .image1 {
-        width: 23px;
-        position: relative;
-        top: -32px;
-        left: -9px;
-      }
-
-      .vertical-title {
-        position: relative;
-        top: 75px;
-        width: 150px;
-        font-size: 20px;
-      }
-
-      .vertical-desc {
-        position: relative;
-        top: 86px;
-        color: gray;
-        width: 200px;
-        font-size: 15px;
+      .vertical {
+        margin-left: 0.01rem !important;
       }
     }
 
@@ -438,37 +426,6 @@
       .vertical-desc {
         width: 60vw;
       }
-
-      .box {
-        flex-direction: column;
-      }
-
-      .secondsec .vertical {
-        height: unset;
-      }
-
-      .vertical-title,
-      .vertical-desc {
-        left: 35px;
-      }
-
-      .secondsec .box {
-        width: 60vw;
-      }
-
-      .secondsec {
-        /* max-width: 80vw;
-        margin: auto; */
-        /* height: 121vh; */
-        margin-bottom: 150px !important;
-        display: flex;
-        flex-direction: column;
-        /* align-items: center; */
-      }
-
-      .vertical {
-        margin-left: 0.01rem !important;
-      }
     }
 
     @keyframes showRight {
@@ -505,7 +462,7 @@
         </div>
       </div>
       <div class="rightdiv">
-        <img src="home-bg.png" alt="">
+        <img src="bg.jpg" alt="">
       </div>
     </section>
     <hr>
