@@ -58,4 +58,5 @@ A modern and responsive personal portfolio website built to showcase my skills, 
 
 ## 👨‍💻 Author
 
-**Devraj Parmar** | [LinkedIn](https://linkedin.com/in/devraj-parmar)
+**Devraj Parmar** | [LinkedIn](https://linkedin.com/in/devraj-parmar) | [Website](https://17devraj.github.io/Portfolio_website/)
+
