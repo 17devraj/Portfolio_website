@@ -12,16 +12,19 @@ A modern and responsive personal portfolio website built to showcase my skills, 
 
 ## 🛠️ Tech Stack
 
-* **Frontend:** HTML, CSS, JavaScript
+* **Frontend:** HTML, CSS, JavaScript, Php
 
 ## 📂 Repository Structure
 
 ```
 ├── index.html              # Home page
-├── style.css               # Custom styles for layout and visuals
+├── about.html
+├── contact.html
+├── projects.html
+├── success.html
+├── submit.php              
 ├── script.js               # JavaScript for interactive behavior
-├── assets/                 # Folder containing images and media
-│   └── profile.jpg         # Profile image used on the site
+├── profile.jpg             # Profile image used on the site
 ├── README.md               # Project documentation
 ```
 
