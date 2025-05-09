@@ -48,7 +48,7 @@ A modern and responsive personal portfolio website built to showcase my skills, 
 
 ## 📸 Preview
 
-![Website Preview](assets/preview.png)
+![Website Preview](preview.jpeg)
 
 ## 🔮 Future Improvements
 
