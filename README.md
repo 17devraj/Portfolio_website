@@ -2,7 +2,7 @@
 
 A modern and responsive personal portfolio website built to showcase my skills, projects, and professional background. This website serves as an online resume and project gallery, helping me highlight my work as a developer.
 
-## 🌟 Features
+## 🚀 Features
 
 * **Responsive Design:** Optimized for all screen sizes (mobile, tablet, desktop)
 * **About Me Section:** Brief introduction and academic background
@@ -47,7 +47,7 @@ A modern and responsive personal portfolio website built to showcase my skills, 
 
 ![Website Preview](assets/preview.png) *(Add a screenshot of your site here)*
 
-## 🔮 Future Enhancements
+## 🔮 Future Improvements
 
 * Add dark/light mode toggle
 * Integrate blog section
@@ -55,9 +55,4 @@ A modern and responsive personal portfolio website built to showcase my skills, 
 
 ## 👨‍💻 Author
 
-**Dev Parmar**
-[GitHub](https://github.com/17devraj) | [LinkedIn](https://linkedin.com/in/yourprofile)
-
-## 📝 License
-
-This project is licensed under the [MIT License](LICENSE).
+**Devraj Parmar** | [LinkedIn](https://linkedin.com/in/devraj-parmar)
